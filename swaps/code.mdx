@@ -6,7 +6,7 @@ icon: 'code'
 
 ## Basics
 
-Orders are placed off-chain and are executed in batches. This largely resembles the order flow CowSwap popularized, however is a process similar to UniDex V1 in 2020. Traders can submit trade quotes, and our "keepers" (also referred to as solvers or resolvers in other protocols) are responsible for finding the most efficient path for the trade. At the end of each auction period, the order is filled at the best rate determined by relayers, and the trade is executed.
+Orders are placed off-chain and are executed in batches. This largely resembles the order flow CowSwap popularized, however this is a process similar to UniDex V1 in 2020. Traders can submit trade quotes and our "keepers" (also referred to as solvers or resolvers in other protocols) are responsible for finding the most efficient path for the trade. At the end of each auction period the order is filled then executed at the best rate determined by relayers
 
 Using Gasless swaps gives the trader a number of benefits such as...
 - Aggregated Limit Orders
@@ -24,8 +24,7 @@ Orders are fulfilled through a process known as "Coincidence of Wants" (CoW). Wh
 Keepers (solvers) can be extremely flexible as well. 
 
 `Meta-Aggregation`\
-By default, orders will be able to fill from numerous different aggregators, This is the common way orders are filled on UniDex and follows the same execution as instant swaps. The benefit of this is that orders are filled by keepers offloading any UX burden from the user such as approving multiple aggregators or paying gas on failed transactions.
-custom sources like lending liquidations, or even cross-chain fills.
+By default, orders will be able to fill from numerous different aggregators, This is the common way orders are filled on UniDex and follows the same execution as instant swaps. The benefit of this is that orders are filled by keepers offloading any UX burden from the user such as approving multiple aggregators, paying gas on failed transactions whilst accessing custom sources like lending liquidations, or even cross-chain fills.
 
 `Cross-Chain Coincidence of Wants`\
 Similar to same chain Coincidence of Wants, Cross-Chain CoW orders allow keepers to fill orders between a shared orderbook between chains.
